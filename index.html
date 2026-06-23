@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ぜーんぶ我慢してた私が、チャトレ2ヶ月で月84万超えた話</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{--pink:#ff6b96;--pink-d:#f24d7e;--ink:#33292e;--gray:#8c8087;--line:#06c755;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);line-height:2;background:#eee7e9;
+    -webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;font-size:16px}
+  .wrap{max-width:500px;margin:0 auto;background:#fff;min-height:100vh}
+  /* 余白で読ませる本家スタイル */
+  .block{padding:54px 26px}
+  .block.tight{padding:30px 26px}
+  .mark{background:linear-gradient(transparent 62%, #ffc6d8 62%);font-weight:700;padding:0 2px}
+  .marky{background:linear-gradient(transparent 62%, #fff0a6 62%);font-weight:700;padding:0 2px}
+  .big{font-size:22px;font-weight:900;line-height:1.65}
+  .lh{line-height:1.95}
+  .em{color:var(--pink-d);font-weight:700}
+  .sp{height:30px}
+
+  /* ピンク帯（問いかけ／呼びかけ） */
+  .band{background:var(--pink);color:#fff;font-weight:700;font-size:18px;line-height:1.7;
+    border-radius:14px;padding:20px 22px;text-align:left;box-shadow:0 8px 20px rgba(255,107,150,.28)}
+
+  /* 収益カード */
+  .income{background:linear-gradient(135deg,#fbeff0,#eef3ec);border-radius:16px;padding:14px;margin:14px 0;
+    box-shadow:0 6px 18px rgba(0,0,0,.06)}
+  .income img{width:100%;display:block;border-radius:10px}
+  .income .cap{font-size:12px;color:var(--gray);text-align:center;margin-top:8px}
+
+  /* チェック枠／失敗枠 */
+  .box{border:2px solid #f0dde3;border-radius:14px;padding:20px 18px;margin:14px 0;background:#fffafb}
+  .box.ng{border-color:#f0dcdc;background:#fff8f7}
+  .box li{list-style:none;font-size:15.5px;font-weight:500;margin:12px 0;padding-left:32px;position:relative;line-height:1.7}
+  .box.ok li::before{content:"✅";position:absolute;left:0}
+  .box.ng li::before{content:"❌";position:absolute;left:0}
+  .box.chk li::before{content:"✓";position:absolute;left:0;color:var(--pink-d);font-weight:900;font-size:18px}
+
+  /* 証言 */
+  .voice{background:#f5f1f2;border-radius:14px;padding:18px 18px;margin:16px 0}
+  .voice .h{font-weight:700;font-size:15px;margin-bottom:8px;color:#5a4a51}
+  .voice p{font-size:14px;line-height:1.85;color:#4d4248}
+
+  /* CTA */
+  .cta{background:linear-gradient(160deg,#fff,#fff3f6);text-align:center}
+  .warn{color:#e23a5e;font-weight:700;font-size:15px}
+  .linebtn{display:block;background:var(--line);color:#fff;font-size:21px;font-weight:900;
+    padding:18px;border-radius:14px;text-decoration:none;box-shadow:0 8px 22px rgba(6,199,85,.45);
+    margin:8px 0;animation:pulse 1.8s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+  .qr{width:200px;margin:18px auto 6px;display:block}
+  .qrbox{width:200px;height:200px;margin:18px auto 6px;background:#fff;border:1px solid #eee;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;color:#bbb;font-size:13px;text-align:center}
+  .note{font-size:12px;color:var(--gray);line-height:1.8;margin-top:18px}
+  .foot{background:#f3dde6;text-align:center;padding:24px;font-size:12px;color:#a98e99}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ① 冒頭フック -->
+  <div class="block">
+    <p class="lh">整形も、推し活も、美容も、旅行も。</p>
+    <div class="sp"></div>
+    <p class="big">ぜーんぶ我慢してた私が<br><span class="mark">チャトレ2ヶ月で月84万超えた話</span><br>知りたいですか？</p>
+    <div class="sp"></div>
+    <p class="lh">しかも<br>ほぼおしゃべりのみ、長時間待機なし。<br>ぶっちゃけ、夜職よりラクで夜職より稼げる。</p>
+    <div class="sp"></div>
+    <p class="lh">気づいたら<br>🍸💄で消耗してた頃よりも<br>メンタル病まずに稼げてた✌</p>
+  </div>
+
+  <!-- ② 問いかけ -->
+  <div class="block tight">
+    <div class="band">「チャトレって登録したけど全然稼げなかった」って思ってない？</div>
+  </div>
+  <div class="block">
+    <p class="lh">わかる。私も最初そうやった。<br>待機しても誰も来ない。<br>やっと来たと思ったら1時間数百円。</p>
+    <div class="sp"></div>
+    <p class="lh">不安で稼働すらできへん。<br>でもそれ、あなたが向いてないんじゃなくて<br><span class="marky">やり方が間違ってただけなんよ。</span></p>
+  </div>
+
+  <!-- ③ 実績 -->
+  <div class="block">
+    <p class="lh">そんな私が<br>ちゃんとした事務所に変えて<br><span class="em">1ヶ月目→2ヶ月目でこうなりました</span>😌✨</p>
+    <div class="income"><img src="images/income_1month.png" alt="1ヶ月目の収益 472,170円"></div>
+    <div class="income"><img src="images/income_2month.png" alt="2ヶ月目の収益 843,000円"></div>
+    <p class="note" style="text-align:center">※実際の報酬明細です。成果には個人差があります。</p>
+  </div>
+
+  <!-- ④ 正しいやり方 -->
+  <div class="block tight">
+    <p class="big" style="text-align:center;margin-bottom:6px">正しいやり方に変えたら</p>
+    <div class="box ok">
+      <li>本名は出さなくてOK</li>
+      <li>ガッツリアダルトなし</li>
+      <li>長時間待機なし</li>
+      <li>スマホ1台、在宅で完結</li>
+    </div>
+    <p class="lh" style="text-align:center">で、気がついたら<br>生活が変わってた✨</p>
+  </div>
+
+  <!-- ⑤ 但し書き -->
+  <div class="block">
+    <p class="lh">もちろん<br>誰でも同じ金額を<br>保証できるわけじゃないです。</p>
+    <div class="sp"></div>
+    <p class="lh">でも、<br><span class="em">事務所選びとやり方を間違えなければ</span><br>今よりラクに稼げる可能性はあります。</p>
+  </div>
+
+  <!-- ⑥ ターゲット呼びかけ -->
+  <div class="block tight">
+    <div class="band">夜職やP活で消耗してる子<br>チャトレ試したけど稼げなかった子へ</div>
+  </div>
+  <div class="block">
+    <p class="lh">SNSでキラキラしてる子を見ながら<br><span class="em">「私だって…」</span>って思ってない？</p>
+    <div class="sp"></div>
+    <p class="lh">わかる。私もそうやった。<br>推しに貢ぎたくても、整形代も、<br>貯金すらままならんかった。</p>
+    <div class="sp"></div>
+    <p class="lh">けど今は、<br>欲しいもの我慢せんでよくなった✌🛍✨</p>
+    <div class="income" style="margin-top:18px"><img src="images/lifestyle_chanel.png" alt="ブランドバッグ"></div>
+  </div>
+
+  <!-- ⑦ 稼げない理由 -->
+  <div class="block tight">
+    <div class="band">チャトレで稼げない本当の理由、知ってる？</div>
+  </div>
+  <div class="block">
+    <p class="lh">実は<br>稼げない子のほとんどが<br>同じ失敗をしてる。</p>
+    <div class="box ng">
+      <li>事務所選びを間違えてる(報酬率が低い)</li>
+      <li>プロフと写真が弱くて客が来ない</li>
+      <li>稼げる時間帯を知らない</li>
+      <li>会話の設計ができてない</li>
+      <li>不安で稼働すらできてない</li>
+    </div>
+    <p class="lh" style="text-align:center">これ、全部解決できる🧶</p>
+  </div>
+
+  <!-- ⑧ 無料マニュアル -->
+  <div class="block">
+    <p class="lh">登録だけで稼げると思って<br>自己流でやってたら、そりゃ稼げない。</p>
+    <div class="sp"></div>
+    <p class="big"><span class="marky">やり方さえ知れば、話が全然違う。</span></p>
+    <div class="sp"></div>
+    <p class="lh">私の無料マニュアル見てくれた子からは…</p>
+    <div style="margin-top:14px">
+      <p class="lh">💬「夜職やめたいけど他にないと思ってた」</p>
+      <p class="lh">💬「登録したのに稼げなくて諦めてた」</p>
+      <p class="lh">💬「やり方変えたらアダルトなしで普通に稼げた」</p>
+    </div>
+    <div class="sp"></div>
+    <p class="lh">って声も多くいただいてるよ👀✨<br>やり方を知った子から<br>稼げるようになってるよ👇</p>
+  </div>
+
+  <!-- ⑨ 証言 -->
+  <div class="block tight">
+    <div class="voice"><div class="h">💬 元キャバ嬢(22歳)／歴2ヶ月</div><p>チャトレ一回やったけど全然稼げなくて、向いてないと思って辞めてた。事務所とプロフが終わってただけで、変えたら1週間で稼ぎ方が変わった。今月52万、キャバの消耗が馬鹿らしくなった。</p></div>
+    <div class="voice"><div class="h">💬 元P活女子(24歳)／歴2ヶ月</div><p>パパ活のドタキャンと値下げ交渉でメンタル終わってた。チャトレも最初は待機ばっかりで諦めかけてたけど、時間帯と会話を変えたら別物に。今月60万、しかも誰にも会ってない。</p></div>
+    <div class="voice"><div class="h">💬 昼職OL(25歳)／歴1ヶ月</div><p>残業しても手取り変わらない給料に限界きてた。どうせ無理かと思ってたけど、プロフ直しただけで客の入りが全然違った。仕事終わりの2時間だけで初月28万。</p></div>
+    <div class="voice"><div class="h">💬 シンママ(28歳)／歴2ヶ月</div><p>昼職だけじゃ足りなくて、夜職は身体がきつくて。最初は全然稼げなかったけど、やり方を知ってから子どもの横でコツコツやって2ヶ月で50万超えた。誰にも会わなくていいのが一番ありがたい。</p></div>
+    <p class="note">※体験談はイメージを含みます。成果には個人差があります。</p>
+  </div>
+
+  <!-- ⑩ 最後の告知 -->
+  <div class="block tight">
+    <div class="band">最後に、もう一度。</div>
+  </div>
+  <div class="block cta">
+    <p class="big" style="margin-bottom:14px">今なら<br><span class="em">【無料サポート付き】</span><br>で始められます🎁</p>
+    <div class="box chk" style="text-align:left">
+      <li>プロフ・写真・時間帯・会話設計まで全部教えます</li>
+      <li>本名は出さなくてOK・ガッツリアダルトなし</li>
+      <li>スマホ1台で完結・<b>報酬率70%</b>(相場は50%)</li>
+    </div>
+    <p class="warn" style="margin:18px 0">⚠️ 枠に限りがあるので<br>早めに受け取ってね！</p>
+    <a class="linebtn" href="https://lin.ee/9hyERGM">LINE 友だち追加</a>
+    <p class="lh">👆 LINE追加はここから</p>
+    <img class="qr" src="images/line_qr.png" alt="LINE友だち追加QRコード">
+    <p class="lh" style="font-size:13px;color:var(--gray)">追加できない人用👆</p>
+    <p class="note">※女性限定です(男性は対象外)。<br>※18歳未満(高校生含む)はご利用いただけません。<br>※無料配布は予告なく終了する場合があります。<br>※成果には個人差があり、確実な収入を保証するものではありません。</p>
+  </div>
+
+  <footer class="foot">ゆるチャット © 2026</footer>
+
+</div>
+</body>
+</html>
