@@ -3,175 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ワンオペ育児で自分を後回しにしてた私が、在宅で自分のお金を持てるまで</title>
+<title>ワンオペ育児の私が、子どもの横で“自分のお金”を持てるまで</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
 <style>
-  :root{--pink:#f48aa6;--pink-d:#e76d8e;--ink:#3f3338;--gray:#9a8f95;--line:#06c755;--warm:#fff6f0;}
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);line-height:2;background:#efe7e4;
-    -webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;font-size:16px}
-  .wrap{max-width:500px;margin:0 auto;background:#fffdfb;min-height:100vh}
-  .block{padding:54px 26px}
-  .block.tight{padding:30px 26px}
-  .mark{background:linear-gradient(transparent 62%, #ffd6c2 62%);font-weight:700;padding:0 2px}
-  .marky{background:linear-gradient(transparent 62%, #fff0a6 62%);font-weight:700;padding:0 2px}
-  .big{font-size:22px;font-weight:900;line-height:1.65}
-  .lh{line-height:1.95}
-  .em{color:var(--pink-d);font-weight:700}
-  .sp{height:30px}
-  .band{background:var(--pink);color:#fff;font-weight:700;font-size:18px;line-height:1.7;
-    border-radius:18px;padding:20px 22px;text-align:left;box-shadow:0 8px 20px rgba(231,109,142,.25)}
-  .income{background:linear-gradient(135deg,#fbeee9,#eef3ec);border-radius:16px;padding:14px;margin:14px 0;
-    box-shadow:0 6px 18px rgba(0,0,0,.06)}
-  .income img{width:100%;display:block;border-radius:10px}
-  .box{border:2px solid #f3dfd6;border-radius:16px;padding:20px 18px;margin:14px 0;background:var(--warm)}
-  .box.ng{border-color:#f0dcdc;background:#fff8f6}
-  .box li{list-style:none;font-size:15.5px;font-weight:500;margin:12px 0;padding-left:32px;position:relative;line-height:1.7}
-  .box.ok li::before{content:"🌷";position:absolute;left:0}
-  .box.ng li::before{content:"❌";position:absolute;left:0}
-  .box.chk li::before{content:"✓";position:absolute;left:0;color:var(--pink-d);font-weight:900;font-size:18px}
-  .voice{background:#f7f1ee;border-radius:16px;padding:18px 18px;margin:16px 0}
-  .voice .h{font-weight:700;font-size:15px;margin-bottom:8px;color:#5f4e54}
-  .voice p{font-size:14px;line-height:1.85;color:#52464c}
-  .cta{position:relative;background:linear-gradient(160deg,#fffdfb,#fff4ee);text-align:center}
-  .warn{color:#e0683f;font-weight:700;font-size:15px}
-  .linebtn{display:block;background:var(--line);color:#fff;font-size:21px;font-weight:900;
-    padding:18px;border-radius:14px;text-decoration:none;box-shadow:0 8px 22px rgba(6,199,85,.45);
-    margin:8px 0;animation:pulse 1.8s ease-in-out infinite}
-  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
-  .qr{width:200px;margin:18px auto 6px;display:block}
-  .note{font-size:12px;color:var(--gray);line-height:1.8;margin-top:18px}
-  .foot{background:#f5e3dc;text-align:center;padding:24px;font-size:12px;color:#b29a92}
+  :root{--p:#ff6f91;--p2:#ff9a76;--pd:#e64d72;--ink:#33272e;--cream:#fff8f4;--line:#06c755}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:#efe7e4;line-height:1.9;font-size:16px;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+  .wrap{max-width:500px;margin:0 auto;background:#fffdfb;overflow:hidden;padding-bottom:78px}
+  h1,h2,h3,.mb{font-family:"Zen Maru Gothic",sans-serif}
+  .rev{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .rev.on{opacity:1;transform:none}
+
+  /* HERO */
+  .hero{position:relative;min-height:88vh;display:flex;flex-direction:column;justify-content:center;
+    padding:40px 28px;color:#fff;text-align:center;overflow:hidden;
+    background:linear-gradient(160deg,#ff9a76 0%,#ff6f91 50%,#e64d72 100%)}
+  .hero::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;
+    background:rgba(255,255,255,.13);top:-120px;right:-120px}
+  .hero::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;
+    background:rgba(255,255,255,.1);bottom:-80px;left:-90px}
+  .hero .tag{position:relative;display:inline-block;background:rgba(255,255,255,.22);backdrop-filter:blur(6px);
+    padding:7px 18px;border-radius:40px;font-size:12.5px;font-weight:700;letter-spacing:1.5px;margin-bottom:22px}
+  .hero h1{position:relative;font-size:30px;font-weight:900;line-height:1.55;text-shadow:0 4px 20px rgba(150,20,60,.25)}
+  .hero h1 .big{display:block;font-size:46px;color:#fff3b0;margin:6px 0;line-height:1.1}
+  .hero .sub{position:relative;margin-top:20px;font-size:14.5px;font-weight:500;opacity:.97;line-height:1.9}
+  .scrolldown{position:relative;margin-top:36px;font-size:12px;opacity:.85;animation:bob 1.6s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+
+  section{padding:56px 28px}
+  .lead{font-size:15px;color:#6a5d63;text-align:center}
+  .kicker{display:block;text-align:center;font-size:12px;font-weight:700;letter-spacing:3px;color:var(--pd);margin-bottom:10px}
+  h2.t{font-size:23px;font-weight:900;text-align:center;line-height:1.5;margin-bottom:22px}
+  .em{color:var(--pd)}
+
+  /* 共感 吹き出し */
+  .sympathy{background:var(--cream)}
+  .bub{background:#fff;border-radius:18px 18px 18px 5px;padding:15px 18px;margin:13px 0;font-size:14.5px;
+    box-shadow:0 6px 18px rgba(180,120,140,.1);position:relative;padding-left:52px}
+  .bub::before{content:"💭";position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:20px}
+
+  /* 実績 数字でかく */
+  .result{background:linear-gradient(160deg,#fff,#fff2f5);text-align:center}
+  .bigfig{margin:6px 0 4px;line-height:1}
+  .bigfig .lbl{font-size:13px;color:var(--gray,#8c8087);font-weight:700}
+  .bigfig .num{font-family:"Zen Maru Gothic";font-size:62px;font-weight:900;color:var(--pd);letter-spacing:-1px}
+  .bigfig .num small{font-size:24px}
+  .arrowdown{font-size:26px;color:#ffc2cf;margin:6px 0}
+  .shot{background:linear-gradient(135deg,#fbeef0,#eef3ec);border-radius:18px;padding:14px;margin:16px 0;box-shadow:0 8px 22px rgba(0,0,0,.06)}
+  .shot img{width:100%;display:block;border-radius:12px}
+
+  /* 4特徴 アイコンカード */
+  .feat{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+  .feat .c{background:#fff;border:1.5px solid #ffe1e9;border-radius:16px;padding:18px 14px;text-align:center;box-shadow:0 5px 14px rgba(255,111,145,.07)}
+  .feat .c .ic{font-size:32px}
+  .feat .c .t{font-size:13.5px;font-weight:700;margin-top:6px;line-height:1.5}
+
+  /* 証言 */
+  .voices{background:var(--cream)}
+  .voice{background:#fff;border-radius:18px;padding:18px;margin:14px 0;box-shadow:0 8px 22px rgba(180,120,140,.1)}
+  .voice .who{display:flex;align-items:center;gap:11px;margin-bottom:9px}
+  .voice .av{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#ffe1ea,#ffe9d6);display:flex;align-items:center;justify-content:center;font-size:23px;flex:0 0 46px}
+  .voice b{font-family:"Zen Maru Gothic";font-size:14.5px}
+  .voice span{display:block;font-size:12px;color:#9a8f95;font-weight:500}
+  .voice .stars{color:#ffb13d;font-size:13px;margin-bottom:6px}
+  .voice q{font-size:13.5px;color:#52464c;display:block;line-height:1.85}
+
+  /* 理由→解決 */
+  .why .row{display:flex;gap:12px;align-items:center;background:#fff;border-radius:14px;padding:13px 15px;margin:10px 0;box-shadow:0 4px 12px rgba(0,0,0,.05)}
+  .why .x{flex:0 0 26px;height:26px;border-radius:50%;background:#ffe0e0;color:#e05858;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px}
+  .why .row p{font-size:14px;font-weight:500}
+  .solve{margin-top:18px;background:linear-gradient(160deg,#fff,#fff4f7);border:2.5px solid var(--p);border-radius:20px;padding:22px 20px;position:relative;box-shadow:0 10px 26px rgba(255,111,145,.12)}
+  .solve .cap{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--pd);color:#fff;font-family:"Zen Maru Gothic";font-weight:700;font-size:12.5px;padding:5px 18px;border-radius:30px;white-space:nowrap}
+  .solve li{list-style:none;font-size:14.5px;margin:11px 0;padding-left:30px;position:relative;font-weight:500}
+  .solve li::before{content:"✓";position:absolute;left:0;width:21px;height:21px;border-radius:50%;background:var(--p);color:#fff;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center}
+  .solve b{color:var(--pd)}
+
+  /* CTA */
+  .cta{background:linear-gradient(160deg,#ff9a76,#e64d72);color:#fff;text-align:center}
+  .cta h2{color:#fff;font-size:24px;margin-bottom:10px}
+  .cta .free{font-size:14px;opacity:.96;margin-bottom:20px}
+  .cta .qr{width:170px;border-radius:14px;margin:16px auto 6px;display:block;box-shadow:0 8px 22px rgba(0,0,0,.2)}
+  .warn{display:inline-block;background:rgba(0,0,0,.18);border-radius:30px;padding:7px 16px;font-size:12.5px;font-weight:700;margin-bottom:8px}
+  .note{font-size:11px;opacity:.85;margin-top:16px;line-height:1.7}
+  .foot{background:#33272e;color:#8a7f85;text-align:center;padding:22px;font-size:11px}
+
+  /* 固定フッターCTA */
+  .fixed{position:fixed;bottom:0;left:0;right:0;z-index:50;max-width:500px;margin:0 auto;
+    background:rgba(255,255,255,.92);backdrop-filter:blur(8px);padding:11px 16px;box-shadow:0 -4px 18px rgba(0,0,0,.1)}
+  .fixed a{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--line);color:#fff;
+    font-family:"Zen Maru Gothic";font-weight:900;font-size:17px;padding:14px;border-radius:12px;text-decoration:none;
+    box-shadow:0 6px 16px rgba(6,199,85,.4);animation:pulse 1.9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- ① 冒頭フック -->
-  <div class="block">
-    <p class="lh">朝も夜もワンオペ。<br>自分の時間なんて、もう何年もない。</p>
-    <div class="sp"></div>
-    <p class="big">子どものものは買えても<br>自分のものはずっと我慢してた私が<br><span class="mark">在宅で自分のお金を持てた話</span></p>
-    <div class="sp"></div>
-    <p class="lh">家で、子どもが寝たあとに<br>スマホでおしゃべりするだけ。<br>パートに出るより、ずっとラクだった。</p>
-    <div class="sp"></div>
-    <p class="lh">気づいたら<br>旦那に気をつかわず使えるお金ができて<br>心にちょっと余裕ができてた🤍</p>
-  </div>
+  <!-- HERO -->
+  <header class="hero">
+    <span class="tag">完全在宅｜ママのための働き方</span>
+    <h1>子どものものは買えても<br>自分のものは我慢してた私が<span class="big">月64万</span>自分のお金を持てた</h1>
+    <p class="sub">子どもが寝たあと、スマホで30分〜。<br>送り迎えも寝かしつけも今まで通りでOK🤍</p>
+    <div class="scrolldown">▼ どうやって？</div>
+  </header>
 
-  <!-- ② 問いかけ -->
-  <div class="block tight">
-    <div class="band">在宅ワーク、調べたけど結局なにも続かなかった…って人いない？</div>
-  </div>
-  <div class="block">
-    <p class="lh">わかる。私もそうだった。<br>アンケートもポイ活も、時給にならない。<br>かといって外に働きに出る時間もない。</p>
-    <div class="sp"></div>
-    <p class="lh">子どもが寝た後の1〜2時間で<br>ちゃんとお金になる方法って、<br><span class="marky">知らなかっただけなんだよね。</span></p>
-  </div>
+  <!-- 共感 -->
+  <section class="sympathy">
+    <span class="kicker rev">YOUR FEELING</span>
+    <h2 class="t rev">その気持ち、<span class="em">痛いほどわかる</span></h2>
+    <div class="bub rev">毎月お金のことばかり。自分の物はずっと我慢</div>
+    <div class="bub rev">旦那に「今月キツくて」って言うのが地味につらい</div>
+    <div class="bub rev">気づけば「◯◯ちゃんのママ」としか呼ばれない</div>
+    <div class="bub rev">自分のお金がないだけで、こんなに肩身が狭い</div>
+    <p class="lead rev" style="margin-top:18px">私も、全部そうでした。<br>でも——子どもの横にいながら、自分の力で稼げるようになったんです。</p>
+  </section>
 
-  <!-- ③ 実績 -->
-  <div class="block">
-    <p class="lh">普通の2児ママの私が<br>家でコツコツやって<br><span class="em">1ヶ月目→2ヶ月目でこうなりました</span>🤍</p>
-    <div class="income"><img src="images/income_1month_m.png" alt="1ヶ月目の収益 314,600円"></div>
-    <div class="income"><img src="images/income_2month_m.png" alt="2ヶ月目の収益 641,000円"></div>
-    <p class="note" style="text-align:center">※実際の報酬明細です。成果には個人差があります。</p>
-  </div>
+  <!-- 実績 -->
+  <section class="result">
+    <span class="kicker rev">REAL RESULT</span>
+    <h2 class="t rev">普通の2児ママが<br>子どもの横で、これだけ</h2>
+    <div class="bigfig rev"><span class="lbl">1ヶ月目</span><br><span class="num"><small>¥</small>314,600</span></div>
+    <div class="arrowdown rev">▼</div>
+    <div class="bigfig rev"><span class="lbl">2ヶ月目</span><br><span class="num"><small>¥</small>641,000</span></div>
+    <div class="shot rev"><img src="images/income_2month_m.png" alt="2ヶ月目の報酬明細"></div>
+    <p class="note rev" style="color:#b3a6ac">※実際の報酬明細です。成果には個人差があります</p>
+  </section>
 
-  <!-- ④ こういう働き方 -->
-  <div class="block tight">
-    <p class="big" style="text-align:center;margin-bottom:6px">こんな働き方です</p>
-    <div class="box ok">
-      <li>子どもが寝た後の30分〜でOK・ノルマなし</li>
-      <li>本名は出さなくてOK(身バレ対策あり)</li>
-      <li>ガッツリしたことは無し・会話メイン</li>
-      <li>スマホ1台、家から一歩も出ずに完結</li>
+  <!-- 4特徴 -->
+  <section>
+    <span class="kicker rev">WHY MOM?</span>
+    <h2 class="t rev">ママに向いてる<span class="em">4つの理由</span></h2>
+    <div class="feat">
+      <div class="c rev"><div class="ic">🌙</div><div class="t">子が寝た後の<br>30分〜でOK</div></div>
+      <div class="c rev"><div class="ic">🏠</div><div class="t">完全在宅<br>外に出なくていい</div></div>
+      <div class="c rev"><div class="ic">🙈</div><div class="t">本名なし<br>身バレ対策あり</div></div>
+      <div class="c rev"><div class="ic">🚫</div><div class="t">ノルマなし<br>自分のペース</div></div>
     </div>
-    <p class="lh" style="text-align:center">送り迎えも寝かしつけも<br>今まで通りで大丈夫🤍</p>
-  </div>
+    <p class="lead rev" style="margin-top:18px">送り迎えも寝かしつけも、<br>今まで通りで大丈夫🤍</p>
+  </section>
 
-  <!-- ⑤ 但し書き -->
-  <div class="block">
-    <p class="lh">もちろん<br>誰でも同じ金額を<br>保証できるわけじゃないです。</p>
-    <div class="sp"></div>
-    <p class="lh">でも、<br><span class="em">やり方さえ最初に知れば</span><br>今よりずっとラクに、と思えるはず。</p>
-  </div>
+  <!-- 証言 -->
+  <section class="voices">
+    <span class="kicker rev">VOICE</span>
+    <h2 class="t rev">同じ立場から、<span class="em">変われたママたち</span></h2>
+    <div class="voice rev"><div class="who"><div class="av">🤍</div><div><b>2児ママ・32歳</b><span>自分のお金がほしかった</span></div></div><div class="stars">★★★★★</div><q>旦那に相談せず子どもにおもちゃを買えた時、泣きそうになった。家でバレずにできるのが本当に安心。</q></div>
+    <div class="voice rev"><div class="who"><div class="av">👶</div><div><b>シングルマザー・28歳</b><span>夜は働けない</span></div></div><div class="stars">★★★★★</div><q>子どもが寝た後にコツコツやって2ヶ月で結果が出た。誰にも会わなくていいのが一番ありがたい。</q></div>
+    <div class="voice rev"><div class="who"><div class="av">🍼</div><div><b>専業主婦・30歳</b><span>自分の自由なお金がない</span></div></div><div class="stars">★★★★★</div><q>どうせ無理かと思ってたけど、教わった通りにしたら寝かしつけ後の2時間だけで変わった。</q></div>
+  </section>
 
-  <!-- ⑥ ターゲット呼びかけ -->
-  <div class="block tight">
-    <div class="band">自分の時間もお金もない<br>ぜんぶ後回しのママへ</div>
-  </div>
-  <div class="block">
-    <p class="lh">公園でよその家族を見ながら<br><span class="em">「私だけ余裕ないな…」</span>って<br>思ったこと、ない？</p>
-    <div class="sp"></div>
-    <p class="lh">わかる。私もそうだった。<br>気づけば◯◯ちゃんのママとしか呼ばれなくて、<br>自分が何が好きだったかも忘れてた。</p>
-    <div class="sp"></div>
-    <p class="lh">でも自分のお金ができてから、<br>子どもに我慢させずに、<br>たまには自分にもご褒美できるようになった🤍🛍</p>
-    <div class="income" style="margin-top:18px"><img src="images/reward.jpg" alt="自分へのご褒美"></div>
-  </div>
-
-  <!-- ⑦ 続かない理由 -->
-  <div class="block tight">
-    <div class="band">在宅で稼げない人の<br>本当の理由、知ってる？</div>
-  </div>
-  <div class="block">
-    <p class="lh">実は<br>続かない人のほとんどが<br>同じところでつまずいてる。</p>
-    <div class="box ng">
-      <li>そもそも時給にならない副業を選んでる</li>
-      <li>始め方・プロフの作り方を知らない</li>
-      <li>子育ての合間でできる時間帯を外してる</li>
-      <li>何を話せばいいか分からず辞めてしまう</li>
-      <li>「私には無理」の不安で踏み出せない</li>
+  <!-- 理由→解決 -->
+  <section class="why">
+    <span class="kicker rev">KNOW THIS</span>
+    <h2 class="t rev">続かない人の<span class="em">5つの理由</span></h2>
+    <div class="row rev"><div class="x">✕</div><p>そもそも時給にならない副業を選んでる</p></div>
+    <div class="row rev"><div class="x">✕</div><p>始め方・プロフの作り方を知らない</p></div>
+    <div class="row rev"><div class="x">✕</div><p>子育ての合間でできる時間帯を外してる</p></div>
+    <div class="row rev"><div class="x">✕</div><p>何を話せばいいか分からず辞めてしまう</p></div>
+    <div class="row rev"><div class="x">✕</div><p>「私には無理」の不安で踏み出せない</p></div>
+    <div class="solve rev">
+      <span class="cap">ぜんぶ、一緒に解決します</span>
+      <ul>
+        <li><b>報酬率70%</b>(業界相場は50%)・全員固定</li>
+        <li>プロフ・写真・稼げる時間帯まで<b>一緒に整える</b></li>
+        <li>会話のコツも<b>LINEでサポート</b></li>
+        <li>本名なし・顔出しなしでもOK</li>
+      </ul>
     </div>
-    <p class="lh" style="text-align:center">これ、全部解決できる🧶</p>
-  </div>
+  </section>
 
-  <!-- ⑧ 無料マニュアル -->
-  <div class="block">
-    <p class="lh">自己流でやってたら<br>そりゃ続かないし、稼げない。</p>
-    <div class="sp"></div>
-    <p class="big"><span class="marky">やり方さえ知れば、話が全然違う。</span></p>
-    <div class="sp"></div>
-    <p class="lh">私のやり方を試してくれたママからは…</p>
-    <div style="margin-top:14px">
-      <p class="lh">💬「家にいながらできるなんて知らなかった」</p>
-      <p class="lh">💬「前に挫折したけど、やり方が違ってただけだった」</p>
-      <p class="lh">💬「子どもの横でコツコツできて助かってる」</p>
-    </div>
-    <div class="sp"></div>
-    <p class="lh">って声も多くいただいてるよ👀✨<br>やり方を知ったママから<br>変わってってるよ👇</p>
-  </div>
-
-  <!-- ⑨ 証言 -->
-  <div class="block tight">
-    <div class="voice"><div class="h">💬 2児ママ(32歳)／歴2ヶ月</div><p>旦那に相談せず子どもにおもちゃを買えた時、ちょっと泣きそうになった。最初は全然だったけど、プロフと時間帯を直したら別物に。家でバレずにできるのが本当に安心。</p></div>
-    <div class="voice"><div class="h">💬 シングルマザー(28歳)／歴2ヶ月</div><p>昼のパートだけじゃ全然足りなくて、ずっと不安だった。子どもが寝た後にコツコツやって2ヶ月で50万超えた。誰にも会わなくていいのが一番ありがたい。</p></div>
-    <div class="voice"><div class="h">💬 専業主婦(30歳)／歴1ヶ月</div><p>自分のお金がないのがずっとしんどかった。どうせ無理かと思ってたけど、教えてもらった通りにしたら、寝かしつけ後の2時間だけで初月28万。</p></div>
-    <div class="voice"><div class="h">💬 育休中ママ(26歳)／歴2ヶ月</div><p>復帰後の働き方に絶望してた。家から出ずにできるのが本当にありがたい。今月は思ってた以上で、復帰そのものを考え直してる。</p></div>
-    <p class="note">※体験談はイメージを含みます。成果には個人差があります。</p>
-  </div>
-
-  <!-- ⑩ 最後の告知 -->
-  <div class="block tight">
-    <div class="band">最後に、もう一度。</div>
-  </div>
-  <div class="block cta">
-    <p class="big" style="margin-bottom:14px">プロフ・写真・時間帯まで<br><span class="em">【ぜんぶ一緒に整えます】</span><br>だから初めてでも安心🤍</p>
-    <div class="box chk" style="text-align:left">
-      <li>始め方・プロフ・時間帯・会話まで全部教えます</li>
-      <li>本名は出さなくてOK・ガッツリしたことは無し</li>
-      <li>スマホ1台で完結・<b>報酬率70%</b>(相場は50%)</li>
-    </div>
-    <p class="warn" style="margin:18px 0">⚠️ 丁寧に対応するため<br>受付人数を絞っています</p>
-    <a class="linebtn" href="https://lin.ee/9hyERGM">LINE 友だち追加</a>
-    <p class="lh">👆 LINE追加はここから</p>
-    <img class="qr" src="images/line_qr.png" alt="LINE友だち追加QRコード">
-    <p class="lh" style="font-size:13px;color:var(--gray)">追加できない人用👆</p>
-    <p class="note">※女性限定です(男性は対象外)。<br>※18歳未満(高校生含む)はご利用いただけません。<br>※受付は予告なく終了する場合があります。<br>※成果には個人差があり、確実な収入を保証するものではありません。</p>
-  </div>
+  <!-- CTA -->
+  <section class="cta">
+    <h2 class="rev">まずは、<br>私にもできるか聞いてみて🤍</h2>
+    <p class="free rev">「私にもできる?」「いくらくらい?」<br>どんな小さな質問でも大丈夫。<br>しつこい勧誘は一切しません。</p>
+    <span class="warn rev">⚠️ 丁寧に対応するため受付を絞っています</span>
+    <img class="qr rev" src="images/line_qr.png" alt="LINE QRコード">
+    <p class="rev" style="font-size:13px;opacity:.9">👆 QR または下のボタンから</p>
+    <p class="note rev">※女性限定(男性は対象外)。※18歳未満(高校生含む)不可。<br>※成果には個人差があり、確実な収入を保証するものではありません。</p>
+  </section>
 
   <footer class="foot">© 2026</footer>
-
 </div>
+
+<!-- 固定CTA -->
+<div class="fixed"><a href="https://lin.ee/9hyERGM">💬 LINEで相談してみる</a></div>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
