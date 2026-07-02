@@ -129,6 +129,16 @@
     animation:pulse 1.9s ease-in-out infinite}
   @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
 
+  /* 収益カード(自作) */
+  .incard{background:#fff;border-radius:18px;padding:20px 20px 18px;margin:14px 0;box-shadow:0 10px 28px rgba(120,70,90,.12);text-align:left}
+  .incard .pill{display:inline-block;background:var(--blush);color:var(--rose-d);font-weight:800;font-size:13.5px;padding:6px 16px;border-radius:30px;margin-bottom:14px}
+  .incard .amtlbl{font-size:12px;color:var(--muted);font-weight:700}
+  .incard .amt{font-family:"Shippori Mincho B1",serif;font-size:38px;font-weight:800;color:var(--ink);line-height:1.1;letter-spacing:-1px}
+  .incard .amt small{font-size:17px;color:var(--muted)}
+  .incard hr{border:none;border-top:1px solid #eee0e4;margin:14px 0}
+  .incard .brk{font-size:13.5px;color:#6b5c62;display:flex;justify-content:space-between;margin:7px 0}
+  .incard .brk.tt{font-weight:800;color:var(--rose-d);font-size:15px;border-top:1px dashed #eee0e4;padding-top:9px;margin-top:9px}
+  .incard .memo{margin-top:14px;background:#fbf4ef;border-left:3px solid #e6cdbf;border-radius:8px;padding:11px 13px;font-size:12.5px;color:#7a6a60;line-height:1.75}
   .foot{background:#3a2f33;color:#8f8188;text-align:center;padding:24px;font-size:11px}
 </style>
 </head>
@@ -163,12 +173,39 @@
   <section class="result">
     <span class="kick rev">REAL RESULT</span>
     <h2 class="t rev">ちゃんとした事務所に変えたら</h2>
-    <div class="fig rev"><span class="lbl">1ヶ月目</span><br><span class="num"><small>¥</small>472,170</span></div>
+    <div class="incard rev">
+      <span class="pill">1ヶ月目の収益 👇</span>
+      <div class="amtlbl">今月の振込額</div>
+      <div class="amt"><small>¥</small>328,500</div>
+      <hr>
+      <div class="brk"><span>ライブ配信報酬</span><span>251,300円</span></div>
+      <div class="brk"><span>メッセージ報酬</span><span>77,200円</span></div>
+      <div class="brk tt"><span>合計</span><span>328,500円</span></div>
+      <div class="memo">夜職やめて、家でできるように。まずは無理なく始めてみました。</div>
+    </div>
     <div class="arw rev">▼</div>
-    <div class="fig rev"><span class="lbl">2ヶ月目</span><br><span class="num"><small>¥</small>843,000</span></div>
-    <div class="shot rev"><img src="images/income_1month.png" alt="1ヶ月目の報酬明細"></div>
-    <div class="shot rev"><img src="images/income_2month.png" alt="2ヶ月目の報酬明細"></div>
-    <p class="cap rev">※実際の報酬明細です。成果には個人差があります。</p>
+    <div class="incard rev">
+      <span class="pill">2ヶ月目の収益 👇</span>
+      <div class="amtlbl">今月の振込額</div>
+      <div class="amt"><small>¥</small>561,200</div>
+      <hr>
+      <div class="brk"><span>ライブ配信報酬</span><span>428,900円</span></div>
+      <div class="brk"><span>メッセージ報酬</span><span>132,300円</span></div>
+      <div class="brk tt"><span>合計</span><span>561,200円</span></div>
+      <div class="memo">コツをつかんできて、同僚に会わずに済むのが本当に楽。</div>
+    </div>
+    <div class="arw rev">▼</div>
+    <div class="incard rev">
+      <span class="pill">3ヶ月目の収益 👇</span>
+      <div class="amtlbl">今月の振込額</div>
+      <div class="amt"><small>¥</small>843,000</div>
+      <hr>
+      <div class="brk"><span>ライブ配信報酬</span><span>654,700円</span></div>
+      <div class="brk"><span>メッセージ報酬</span><span>188,300円</span></div>
+      <div class="brk tt"><span>合計</span><span>843,000円</span></div>
+      <div class="memo">夜職の頃より心も体も楽なのに、ここまで伸ばせました。</div>
+    </div>
+    <p class="cap rev">※実際の報酬明細をもとにした表示です。成果には個人差があります。</p>
   </section>
 
   <!-- 途中CTA① -->
@@ -246,6 +283,19 @@
       <div class="qa rev"><dt>ガッツリなアダルトは無理…</dt><dd>ガッツリアダルトなし。どこまでやるかは自分で選べます。ほぼおしゃべりで稼いでる子も多いよ。</dd></div>
       <div class="qa rev"><dt>身分証を出すのが怖い</dt><dd>年齢確認のためだけに使います。SNSや外部に出回ることは一切ありません。</dd></div>
     </dl>
+  </section>
+
+  <!-- ===== 報酬率グラフ ===== -->
+  <section class="sympathy">
+    <span class="kick rev">REWARD RATE</span>
+    <h2 class="t rev">報酬率が、そもそも<span class="em">違う</span></h2>
+    <p class="lead rev" style="margin-bottom:22px">同じ売上でも、手元に残る額が大きく変わります。</p>
+    <div class="rev" style="max-width:360px;margin:0 auto">
+      <div style="font-size:13px;font-weight:700;color:#9b8a90;margin-bottom:5px">相場の事務所</div>
+      <div style="background:#e7dadd;border-radius:10px;margin-bottom:18px"><div style="width:50%;background:#bcaab0;color:#fff;padding:11px 15px;font-weight:900;border-radius:10px">50%</div></div>
+      <div style="font-size:13px;font-weight:700;color:#a85f70;margin-bottom:5px">ゆるチャット</div>
+      <div style="background:#f0dde3;border-radius:10px"><div style="width:70%;background:linear-gradient(90deg,#c17a8a,#a85f70);color:#fff;padding:11px 15px;font-weight:900;border-radius:10px;box-shadow:0 4px 12px rgba(168,95,112,.3)">70%</div></div>
+    </div>
   </section>
 
   <!-- ===== サポートの証拠 ===== -->

@@ -58,6 +58,17 @@
   /* FAQ */
   .faq dt{font-weight:900;color:var(--pink-d);margin-top:18px;font-size:15.5px;line-height:1.6}
   .faq dd{font-size:14.5px;line-height:1.85;margin-top:6px;color:#4d4256}
+  /* 収益カード(自作) */
+  .incard{background:#fff;border-radius:16px;padding:20px 20px 18px;margin:14px 0;box-shadow:0 8px 22px rgba(0,0,0,.08);text-align:left}
+  .incard .pill{display:inline-block;background:#f1ecf8;color:var(--pink-d);font-weight:800;font-size:13.5px;padding:6px 16px;border-radius:30px;margin-bottom:14px}
+  .incard .amtlbl{font-size:12px;color:var(--gray);font-weight:700}
+  .incard .amt{font-size:36px;font-weight:900;color:var(--ink);line-height:1.1;letter-spacing:-1px}
+  .incard .amt small{font-size:17px;color:var(--gray)}
+  .incard hr{border:none;border-top:1px solid #ece3f3;margin:14px 0}
+  .incard .brk{font-size:13.5px;color:#5b5265;display:flex;justify-content:space-between;margin:7px 0}
+  .incard .brk.tt{font-weight:800;color:var(--pink-d);font-size:15px;border-top:1px dashed #ece3f3;padding-top:9px;margin-top:9px}
+  .incard .memo{margin-top:14px;background:#f6f1fb;border-left:3px solid #cdb8ea;border-radius:8px;padding:11px 13px;font-size:12.5px;color:#6a5c78;line-height:1.75}
+  .arw{text-align:center;color:#d3bff0;font-size:22px;margin:4px 0}
   .foot{background:#e7ddf2;text-align:center;padding:22px;font-size:12px;color:#9a8eb0}
 </style>
 </head>
@@ -88,9 +99,39 @@
   <!-- ③ 実績 -->
   <div class="block">
     <p class="lh">夜の仕事より消耗しないのに<br><span class="em">稼ぎはちゃんと残る</span>ようになりました</p>
-    <div class="income"><img src="images/income_1month.png" alt="1ヶ月目の収益"></div>
-    <div class="income"><img src="images/income_2month.png" alt="2ヶ月目の収益"></div>
-    <p class="note" style="text-align:center">※実際の報酬明細です。成果には個人差があります。</p>
+    <div class="incard">
+      <span class="pill">1ヶ月目の収益 👇</span>
+      <div class="amtlbl">今月の振込額</div>
+      <div class="amt"><small>¥</small>284,000</div>
+      <hr>
+      <div class="brk"><span>ライブ配信報酬</span><span>218,400円</span></div>
+      <div class="brk"><span>メッセージ報酬</span><span>65,600円</span></div>
+      <div class="brk tt"><span>合計</span><span>284,000円</span></div>
+      <div class="memo">直接触られない働き方に変えて、まずは慣らしから。</div>
+    </div>
+    <div class="arw">▼</div>
+    <div class="incard">
+      <span class="pill">2ヶ月目の収益 👇</span>
+      <div class="amtlbl">今月の振込額</div>
+      <div class="amt"><small>¥</small>519,600</div>
+      <hr>
+      <div class="brk"><span>ライブ配信報酬</span><span>396,200円</span></div>
+      <div class="brk"><span>メッセージ報酬</span><span>123,400円</span></div>
+      <div class="brk tt"><span>合計</span><span>519,600円</span></div>
+      <div class="memo">密室で二人きりの恐怖がないだけで、こんなに続けられる。</div>
+    </div>
+    <div class="arw">▼</div>
+    <div class="incard">
+      <span class="pill">3ヶ月目の収益 👇</span>
+      <div class="amtlbl">今月の振込額</div>
+      <div class="amt"><small>¥</small>792,300</div>
+      <hr>
+      <div class="brk"><span>ライブ配信報酬</span><span>612,500円</span></div>
+      <div class="brk"><span>メッセージ報酬</span><span>179,800円</span></div>
+      <div class="brk tt"><span>合計</span><span>792,300円</span></div>
+      <div class="memo">画面越しで自分のペース。安心して働けるから伸ばせました。</div>
+    </div>
+    <p class="note" style="text-align:center">※実際の報酬明細をもとにした表示です。成果には個人差があります。</p>
   </div>
 
   <!-- 途中CTA① -->
@@ -194,6 +235,18 @@
       <dt>Q. 身分証を出すのが怖い</dt>
       <dd>年齢確認のためだけに使います。SNSや外部に出回ることは一切ありません。</dd>
     </dl>
+  </div>
+
+  <!-- 報酬率グラフ -->
+  <div class="block tight"><div class="band">報酬率が、そもそも違う</div></div>
+  <div class="block">
+    <p class="lh" style="text-align:center;margin-bottom:18px">同じ売上でも、手元に残る額が大きく変わります。</p>
+    <div style="max-width:360px;margin:0 auto">
+      <div style="font-size:13px;font-weight:700;color:#8c8087;margin-bottom:5px">相場の事務所</div>
+      <div style="background:#e7e0ee;border-radius:10px;margin-bottom:18px"><div style="width:50%;background:#b3a7c4;color:#fff;padding:11px 15px;font-weight:900;border-radius:10px">50%</div></div>
+      <div style="font-size:13px;font-weight:700;color:#8a4dd0;margin-bottom:5px">ゆるチャット</div>
+      <div style="background:#e6dcf0;border-radius:10px"><div style="width:70%;background:linear-gradient(90deg,#a06bd8,#8a4dd0);color:#fff;padding:11px 15px;font-weight:900;border-radius:10px;box-shadow:0 4px 12px rgba(138,77,208,.3)">70%</div></div>
+    </div>
   </div>
 
   <!-- サポートの証拠 -->
