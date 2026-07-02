@@ -3,189 +3,276 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ぜーんぶ我慢してた私が、チャトレ2ヶ月で月84万超えた話</title>
+<title>ぜんぶ我慢してた私が、チャトレ2ヶ月で月84万超えた話</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--pink:#ff6b96;--pink-d:#f24d7e;--ink:#33292e;--gray:#8c8087;--line:#06c755;}
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);line-height:2;background:#eee7e9;
-    -webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;font-size:16px}
-  .wrap{max-width:500px;margin:0 auto;background:#fff;min-height:100vh}
-  /* 余白で読ませる本家スタイル */
-  .block{padding:54px 26px}
-  .block.tight{padding:30px 26px}
-  .mark{background:linear-gradient(transparent 62%, #ffc6d8 62%);font-weight:700;padding:0 2px}
-  .marky{background:linear-gradient(transparent 62%, #fff0a6 62%);font-weight:700;padding:0 2px}
-  .big{font-size:22px;font-weight:900;line-height:1.65}
-  .lh{line-height:1.95}
-  .em{color:var(--pink-d);font-weight:700}
-  .sp{height:30px}
+  :root{
+    --rose:#c17a8a; --rose-d:#a85f70; --blush:#f4e6e9; --cream:#faf6f4;
+    --ink:#3a2f33; --muted:#9b8a90; --gold:#c2a06a; --line:#06c755;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:#e7dee0;
+    line-height:2;font-size:16px;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+  .wrap{max-width:500px;margin:0 auto;background:var(--cream);overflow:hidden;padding-bottom:84px}
+  .mc{font-family:"Shippori Mincho B1",serif}
+  .em{color:var(--rose-d);font-weight:700}
+  .rev{opacity:0;transform:translateY(26px);transition:.8s cubic-bezier(.2,.7,.2,1)}
+  .rev.on{opacity:1;transform:none}
 
-  /* ピンク帯（問いかけ／呼びかけ） */
-  .band{background:var(--pink);color:#fff;font-weight:700;font-size:18px;line-height:1.7;
-    border-radius:14px;padding:20px 22px;text-align:left;box-shadow:0 8px 20px rgba(255,107,150,.28)}
+  /* 画像プレースホルダ（後で差し替え） */
+  .ph{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+    background:linear-gradient(135deg,#f6ebee,#efe0e4);color:#b48f99;font-size:12px;line-height:1.7;font-weight:700;
+    padding:24px;border-radius:14px;border:1.5px dashed #d9bcc4;min-height:130px}
+  .ph::before{content:"📷";font-size:26px;margin-bottom:6px}
+  .ph span{font-weight:500;font-size:10.5px;display:block;margin-top:4px;color:#c2a7ae}
 
-  /* 収益カード */
-  .income{background:linear-gradient(135deg,#fbeff0,#eef3ec);border-radius:16px;padding:14px;margin:14px 0;
-    box-shadow:0 6px 18px rgba(0,0,0,.06)}
-  .income img{width:100%;display:block;border-radius:10px}
-  .income .cap{font-size:12px;color:var(--gray);text-align:center;margin-top:8px}
+  /* HERO */
+  .hero{position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:flex-end;
+    padding:0;overflow:hidden;background:linear-gradient(150deg,#d7929f,#c17a8a 55%,#8f5061)}
+  .hero .heroimg{position:absolute;inset:0;border-radius:0}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(40,20,28,.72) 8%,rgba(40,20,28,.25) 46%,rgba(40,20,28,.05) 100%)}
+  .hero .inner{position:relative;padding:0 30px 46px;color:#fff}
+  .hero .chip{display:inline-block;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,.35);padding:6px 15px;border-radius:40px;
+    font-size:11.5px;font-weight:700;letter-spacing:2px;margin-bottom:20px}
+  .hero h1{font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:29px;line-height:1.7;
+    text-shadow:0 3px 24px rgba(60,10,30,.4)}
+  .hero h1 .yen{display:block;font-size:56px;color:#ffe6a6;letter-spacing:-1px;margin:8px 0;line-height:1}
+  .hero .sub{margin-top:18px;font-size:14px;font-weight:500;line-height:2;opacity:.96}
+  .hero .cue{margin-top:26px;font-size:11px;letter-spacing:2px;opacity:.8;animation:bob 1.7s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 
-  /* チェック枠／失敗枠 */
-  .box{border:2px solid #f0dde3;border-radius:14px;padding:20px 18px;margin:14px 0;background:#fffafb}
-  .box.ng{border-color:#f0dcdc;background:#fff8f7}
-  .box li{list-style:none;font-size:15.5px;font-weight:500;margin:12px 0;padding-left:32px;position:relative;line-height:1.7}
-  .box.ok li::before{content:"✅";position:absolute;left:0}
-  .box.ng li::before{content:"❌";position:absolute;left:0}
-  .box.chk li::before{content:"✓";position:absolute;left:0;color:var(--pink-d);font-weight:900;font-size:18px}
+  section{padding:64px 30px}
+  .kick{display:block;text-align:center;font-size:11px;font-weight:700;letter-spacing:4px;color:var(--rose);margin-bottom:14px}
+  h2.t{font-family:"Shippori Mincho B1",serif;font-size:24px;font-weight:800;text-align:center;line-height:1.7;margin-bottom:8px}
+  .lead{font-size:14.5px;color:#7a6b70;text-align:center;line-height:2}
+  .sp{height:26px}
+
+  /* 共感 */
+  .sympathy{background:var(--blush)}
+  .bub{background:#fff;border-radius:20px 20px 20px 6px;padding:15px 20px;margin:14px 0;
+    font-size:14.5px;line-height:1.9;box-shadow:0 8px 22px rgba(150,90,110,.09)}
+  .bub .q{color:var(--rose-d);font-weight:700;margin-right:6px}
+
+  /* 実績 */
+  .result{background:var(--cream);text-align:center}
+  .fig{margin:10px 0}
+  .fig .lbl{font-size:12.5px;color:var(--muted);font-weight:700;letter-spacing:1px}
+  .fig .num{font-family:"Shippori Mincho B1",serif;font-size:58px;font-weight:800;color:var(--rose-d);letter-spacing:-1px;line-height:1.1}
+  .fig .num small{font-size:22px}
+  .arw{color:#e6c2cc;font-size:22px;margin:2px 0}
+  .shot{border-radius:18px;padding:12px;margin:18px 0 6px;background:#fff;box-shadow:0 10px 28px rgba(120,70,90,.12)}
+  .shot img{width:100%;display:block;border-radius:12px}
+  .cap{font-size:11.5px;color:var(--muted);margin-top:10px}
+
+  /* 4特徴 */
+  .feat{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:6px}
+  .fc{background:#fff;border:1px solid #f0dfe4;border-radius:18px;padding:22px 14px;text-align:center;box-shadow:0 6px 16px rgba(150,90,110,.06)}
+  .fc .ic{font-size:30px}
+  .fc .h{font-size:13.5px;font-weight:700;margin-top:8px;line-height:1.6}
+
+  /* NGリスト */
+  .ng{background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 8px 22px rgba(150,90,110,.08);margin-top:6px}
+  .ng li{list-style:none;font-size:14.5px;font-weight:500;margin:13px 0;padding-left:30px;position:relative;line-height:1.7}
+  .ng li::before{content:"✕";position:absolute;left:0;color:#d98a8a;font-weight:900}
 
   /* 証言 */
-  .voice{background:#f5f1f2;border-radius:14px;padding:18px 18px;margin:16px 0}
-  .voice .h{font-weight:700;font-size:15px;margin-bottom:8px;color:#5a4a51}
-  .voice p{font-size:14px;line-height:1.85;color:#4d4248}
+  .voices{background:var(--blush)}
+  .vc{background:#fff;border-radius:20px;padding:20px;margin:15px 0;box-shadow:0 10px 26px rgba(150,90,110,.1)}
+  .vc .top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+  .vc .av{width:48px;height:48px;border-radius:50%;flex:0 0 48px;
+    background:linear-gradient(135deg,#f4dbe1,#ffe8d6);display:flex;align-items:center;justify-content:center;font-size:24px}
+  .vc b{font-size:14.5px;font-weight:700}
+  .vc .meta{display:block;font-size:11.5px;color:var(--muted);font-weight:500}
+  .vc .st{color:var(--gold);font-size:13px;margin-bottom:6px}
+  .vc p{font-size:13.5px;line-height:1.9;color:#5b4c52}
+
+  /* ステップ */
+  .step{position:relative;background:#fff;border-radius:16px;padding:16px 18px 16px 60px;margin:13px 0;
+    font-size:14.5px;font-weight:500;line-height:1.7;box-shadow:0 6px 16px rgba(150,90,110,.07)}
+  .step::before{content:attr(data-n);position:absolute;left:15px;top:50%;transform:translateY(-50%);
+    width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--rose-d));
+    color:#fff;font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:17px;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(168,95,112,.4)}
+
+  /* FAQ */
+  .faq{background:var(--cream)}
+  .qa{border-bottom:1px solid #ecdde1;padding:18px 0}
+  .qa dt{font-weight:700;color:var(--rose-d);font-size:15px;line-height:1.7;position:relative;padding-left:26px}
+  .qa dt::before{content:"Q";position:absolute;left:0;font-family:"Shippori Mincho B1",serif;font-weight:800}
+  .qa dd{font-size:14px;line-height:1.9;color:#5b4c52;margin-top:8px;padding-left:26px}
 
   /* CTA */
-  .cta{background:linear-gradient(160deg,#fff,#fff3f6);text-align:center}
-  .warn{color:#e23a5e;font-weight:700;font-size:15px}
-  .linebtn{display:block;background:var(--line);color:#fff;font-size:21px;font-weight:900;
-    padding:18px;border-radius:14px;text-decoration:none;box-shadow:0 8px 22px rgba(6,199,85,.45);
-    margin:8px 0;animation:pulse 1.8s ease-in-out infinite}
-  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
-  .qr{width:200px;margin:18px auto 6px;display:block}
-  .qrbox{width:200px;height:200px;margin:18px auto 6px;background:#fff;border:1px solid #eee;border-radius:10px;
-    display:flex;align-items:center;justify-content:center;color:#bbb;font-size:13px;text-align:center}
-  .note{font-size:12px;color:var(--gray);line-height:1.8;margin-top:18px}
-  .foot{background:#f3dde6;text-align:center;padding:24px;font-size:12px;color:#a98e99}
+  .cta{background:linear-gradient(160deg,#c17a8a,#8f5061);color:#fff;text-align:center}
+  .cta h2{font-family:"Shippori Mincho B1",serif;color:#fff;font-size:23px;line-height:1.7;margin-bottom:12px}
+  .cta .chk{list-style:none;text-align:left;background:rgba(255,255,255,.12);border-radius:16px;padding:18px 20px;margin:18px 0}
+  .cta .chk li{font-size:14px;margin:11px 0;padding-left:28px;position:relative;font-weight:500}
+  .cta .chk li::before{content:"✓";position:absolute;left:0;color:#ffe6a6;font-weight:900}
+  .cta .warn{display:inline-block;background:rgba(0,0,0,.18);border-radius:30px;padding:7px 16px;font-size:12.5px;font-weight:700;margin:6px 0 14px}
+  .qr{width:172px;border-radius:14px;margin:14px auto 6px;display:block;box-shadow:0 8px 22px rgba(0,0,0,.22)}
+  .note{font-size:11px;line-height:1.75;opacity:.85;margin-top:16px}
+
+  /* 途中CTA */
+  .midcta{padding:0 30px 46px}
+  .midcta a,.btn{display:block;background:var(--line);color:#fff;font-weight:900;font-size:18px;
+    padding:17px;border-radius:14px;text-decoration:none;text-align:center;box-shadow:0 8px 22px rgba(6,199,85,.4)}
+
+  /* 追従CTA */
+  .float{position:fixed;left:0;right:0;bottom:0;z-index:60;max-width:500px;margin:0 auto;
+    background:rgba(255,255,255,.95);backdrop-filter:blur(8px);padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+    box-shadow:0 -4px 18px rgba(0,0,0,.14)}
+  .float a{display:block;background:var(--line);color:#fff;font-weight:900;font-size:17px;padding:14px;
+    border-radius:12px;text-decoration:none;text-align:center;box-shadow:0 6px 16px rgba(6,199,85,.4);
+    animation:pulse 1.9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+
+  .foot{background:#3a2f33;color:#8f8188;text-align:center;padding:24px;font-size:11px}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- ① 冒頭フック -->
-  <div class="block">
-    <p class="lh">整形も、推し活も、美容も、旅行も。</p>
-    <div class="sp"></div>
-    <p class="big">ぜーんぶ我慢してた私が<br><span class="mark">チャトレ2ヶ月で月84万超えた話</span><br>知りたいですか？</p>
-    <div class="sp"></div>
-    <p class="lh">しかも<br>ほぼおしゃべりのみ、長時間待機なし。<br>ぶっちゃけ、夜職よりラクで夜職より稼げる。</p>
-    <div class="sp"></div>
-    <p class="lh">気づいたら<br>🍸💄で消耗してた頃よりも<br>メンタル病まずに稼げてた✌</p>
-  </div>
-
-  <!-- ② 問いかけ -->
-  <div class="block tight">
-    <div class="band">「チャトレって登録したけど全然稼げなかった」って思ってない？</div>
-  </div>
-  <div class="block">
-    <p class="lh">わかる。私も最初そうだった。<br>待機しても誰も来ない。<br>やっと来たと思ったら1時間数百円。</p>
-    <div class="sp"></div>
-    <p class="lh">不安で稼働すらできない。<br>でもそれ、あなたが向いてないんじゃなくて<br><span class="marky">やり方が間違ってただけ。</span></p>
-  </div>
-
-  <!-- ③ 実績 -->
-  <div class="block">
-    <p class="lh">そんな私が<br>ちゃんとした事務所に変えて<br><span class="em">1ヶ月目→2ヶ月目でこうなりました</span>😌✨</p>
-    <div class="income"><img src="images/income_1month.png" alt="1ヶ月目の収益 472,170円"></div>
-    <div class="income"><img src="images/income_2month.png" alt="2ヶ月目の収益 843,000円"></div>
-    <p class="note" style="text-align:center">※実際の報酬明細です。成果には個人差があります。</p>
-  </div>
-
-  <!-- ④ 正しいやり方 -->
-  <div class="block tight">
-    <p class="big" style="text-align:center;margin-bottom:6px">正しいやり方に変えたら</p>
-    <div class="box ok">
-      <li>本名は出さなくてOK</li>
-      <li>ガッツリアダルトなし</li>
-      <li>長時間待機なし</li>
-      <li>スマホ1台、在宅で完結</li>
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <!-- HERO背景写真：用意でき次第 .hero に background-image:url(images/hero.jpg) を足すだけ
+         推奨＝縦長1080×1350・在宅でスマホを持つ女性・顔なし/後ろ姿・自然光・くすみトーン。今はグラデHEROで完成状態 -->
+    <div class="veil"></div>
+    <div class="inner">
+      <span class="chip">完全在宅 ｜ ほぼおしゃべりだけ</span>
+      <h1>ぜんぶ我慢してた私が<span class="yen">月84万</span>稼げるようになった話</h1>
+      <p class="sub">整形も、推し活も、美容も、旅行も。<br>夜職よりラクで、夜職より稼げた🤍</p>
+      <div class="cue">▼ どうやって？</div>
     </div>
-    <p class="lh" style="text-align:center">で、気がついたら<br>生活が変わってた✨</p>
-  </div>
+  </header>
 
-  <!-- ⑤ 但し書き -->
-  <div class="block">
-    <p class="lh">もちろん<br>誰でも同じ金額を<br>保証できるわけじゃないです。</p>
+  <!-- ===== 共感 ===== -->
+  <section class="sympathy">
+    <span class="kick rev">YOUR FEELING</span>
+    <h2 class="t rev">チャトレ、登録したけど<br><span class="em">稼げなかった</span>って思ってない？</h2>
     <div class="sp"></div>
-    <p class="lh">でも、<br><span class="em">事務所選びとやり方を間違えなければ</span><br>今よりラクに稼げる可能性はあります。</p>
-  </div>
+    <div class="bub rev"><span class="q">″</span>待機しても誰も来ない</div>
+    <div class="bub rev"><span class="q">″</span>やっと来たと思ったら1時間で数百円</div>
+    <div class="bub rev"><span class="q">″</span>不安で、稼働すらできない</div>
+    <p class="lead rev" style="margin-top:20px">わかる。私も最初そうだった。<br>でもそれ、向いてないんじゃなくて<br><span class="em">やり方が違っただけ</span>だった。</p>
+  </section>
 
-  <!-- ⑥ ターゲット呼びかけ -->
-  <div class="block tight">
-    <div class="band">夜職やP活で消耗してる子<br>チャトレ試したけど稼げなかった子へ</div>
-  </div>
-  <div class="block">
-    <p class="lh">SNSでキラキラしてる子を見ながら<br><span class="em">「私だって…」</span>って思ってない？</p>
-    <div class="sp"></div>
-    <p class="lh">わかる。私もそうだった。<br>推しに貢ぎたくても、整形代も、<br>貯金すらままならなかった。</p>
-    <div class="sp"></div>
-    <p class="lh">でも今は、<br>欲しいもの我慢しなくてよくなった✌🛍✨</p>
-    <div class="income" style="margin-top:18px"><img src="images/lifestyle_chanel.png" alt="ブランドバッグ"></div>
-  </div>
+  <!-- ===== 実績 ===== -->
+  <section class="result">
+    <span class="kick rev">REAL RESULT</span>
+    <h2 class="t rev">ちゃんとした事務所に変えたら</h2>
+    <div class="fig rev"><span class="lbl">1ヶ月目</span><br><span class="num"><small>¥</small>472,170</span></div>
+    <div class="arw rev">▼</div>
+    <div class="fig rev"><span class="lbl">2ヶ月目</span><br><span class="num"><small>¥</small>843,000</span></div>
+    <div class="shot rev"><img src="images/income_1month.png" alt="1ヶ月目の報酬明細"></div>
+    <div class="shot rev"><img src="images/income_2month.png" alt="2ヶ月目の報酬明細"></div>
+    <p class="cap rev">※実際の報酬明細です。成果には個人差があります。</p>
+  </section>
 
-  <!-- ⑦ 稼げない理由 -->
-  <div class="block tight">
-    <div class="band">チャトレで稼げない本当の理由、知ってる？</div>
-  </div>
-  <div class="block">
-    <p class="lh">実は<br>稼げない子のほとんどが<br>同じ失敗をしてる。</p>
-    <div class="box ng">
-      <li>事務所選びを間違えてる(報酬率が低い)</li>
+  <!-- 途中CTA① -->
+  <div class="midcta rev"><a href="https://lin.ee/9hyERGM">この稼ぎ方、LINEで詳しく聞いてみる</a></div>
+
+  <!-- ===== 4特徴 ===== -->
+  <section>
+    <span class="kick rev">WHY EASY</span>
+    <h2 class="t rev">正しいやり方に変えたら</h2>
+    <div class="sp"></div>
+    <div class="feat">
+      <div class="fc rev"><div class="ic">🕶️</div><div class="h">本名は<br>出さなくてOK</div></div>
+      <div class="fc rev"><div class="ic">🚫</div><div class="h">ガッツリ<br>アダルトなし</div></div>
+      <div class="fc rev"><div class="ic">⏱️</div><div class="h">長時間<br>待機なし</div></div>
+      <div class="fc rev"><div class="ic">📱</div><div class="h">スマホ1台<br>在宅で完結</div></div>
+    </div>
+    <p class="lead rev" style="margin-top:20px">気がついたら、<br>生活が変わってた✨</p>
+  </section>
+
+  <!-- ===== 生活が変わった（画像） ===== -->
+  <section class="sympathy">
+    <span class="kick rev">AFTER</span>
+    <h2 class="t rev">欲しいもの、<br><span class="em">我慢しなくてよくなった</span></h2>
+    <div class="sp"></div>
+    <div class="shot rev"><img src="images/lifestyle_chanel.png" alt="生活が変わった"></div>
+  </section>
+
+  <!-- ===== 稼げない理由 ===== -->
+  <section>
+    <span class="kick rev">KNOW THIS</span>
+    <h2 class="t rev">稼げない子の<span class="em">共通点</span></h2>
+    <div class="ng rev">
+      <li>事務所選びを間違えてる（報酬率が低い）</li>
       <li>プロフと写真が弱くて客が来ない</li>
       <li>稼げる時間帯を知らない</li>
       <li>会話の設計ができてない</li>
       <li>不安で稼働すらできてない</li>
     </div>
-    <p class="lh" style="text-align:center">これ、全部解決できる🧶</p>
-  </div>
+    <p class="lead rev" style="margin-top:18px">これ、<span class="em">全部いっしょに解決できる</span>🧶</p>
+  </section>
 
-  <!-- ⑧ 無料マニュアル -->
-  <div class="block">
-    <p class="lh">登録だけで稼げると思って<br>自己流でやってたら、そりゃ稼げない。</p>
-    <div class="sp"></div>
-    <p class="big"><span class="marky">やり方さえ知れば、話が全然違う。</span></p>
-    <div class="sp"></div>
-    <p class="lh">私のやり方を試してくれた子からは…</p>
-    <div style="margin-top:14px">
-      <p class="lh">💬「夜職やめたいけど他にないと思ってた」</p>
-      <p class="lh">💬「登録したのに稼げなくて諦めてた」</p>
-      <p class="lh">💬「やり方変えたらアダルトなしで普通に稼げた」</p>
-    </div>
-    <div class="sp"></div>
-    <p class="lh">って声も多くいただいてるよ👀✨<br>やり方を知った子から<br>稼げるようになってるよ👇</p>
-  </div>
+  <!-- ===== 証言 ===== -->
+  <section class="voices">
+    <span class="kick rev">VOICE</span>
+    <h2 class="t rev">同じ場所から、<span class="em">変われた子たち</span></h2>
+    <div class="vc rev"><div class="top"><div class="av">🥀</div><div><b>元キャバ嬢・22歳</b><span class="meta">歴2ヶ月</span></div></div><div class="st">★★★★★</div><p>一回やって稼げなくて向いてないと思ってた。事務所とプロフが終わってただけで、変えたら1週間で別物。今月52万、キャバの消耗が馬鹿らしくなった。</p></div>
+    <div class="vc rev"><div class="top"><div class="av">💋</div><div><b>元P活女子・24歳</b><span class="meta">歴2ヶ月</span></div></div><div class="st">★★★★★</div><p>ドタキャンと値下げ交渉でメンタル終わってた。最初は待機ばっかりで諦めかけたけど、時間帯と会話を変えたら別物に。今月60万、しかも誰にも会ってない。</p></div>
+    <div class="vc rev"><div class="top"><div class="av">🌙</div><div><b>昼職OL・25歳</b><span class="meta">歴1ヶ月</span></div></div><div class="st">★★★★★</div><p>残業しても手取り変わらない給料に限界。プロフ直しただけで客の入りが全然違って、仕事終わりの2時間だけで初月28万。</p></div>
+    <p class="cap rev">※体験談はイメージを含みます。成果には個人差があります。</p>
+  </section>
 
-  <!-- ⑨ 証言 -->
-  <div class="block tight">
-    <div class="voice"><div class="h">💬 元キャバ嬢(22歳)／歴2ヶ月</div><p>チャトレ一回やったけど全然稼げなくて、向いてないと思って辞めてた。事務所とプロフが終わってただけで、変えたら1週間で稼ぎ方が変わった。今月52万、キャバの消耗が馬鹿らしくなった。</p></div>
-    <div class="voice"><div class="h">💬 元P活女子(24歳)／歴2ヶ月</div><p>パパ活のドタキャンと値下げ交渉でメンタル終わってた。チャトレも最初は待機ばっかりで諦めかけてたけど、時間帯と会話を変えたら別物に。今月60万、しかも誰にも会ってない。</p></div>
-    <div class="voice"><div class="h">💬 昼職OL(25歳)／歴1ヶ月</div><p>残業しても手取り変わらない給料に限界きてた。どうせ無理かと思ってたけど、プロフ直しただけで客の入りが全然違った。仕事終わりの2時間だけで初月28万。</p></div>
-    <div class="voice"><div class="h">💬 シンママ(28歳)／歴2ヶ月</div><p>昼職だけじゃ足りなくて、夜職は身体がきつくて。最初は全然稼げなかったけど、やり方を知ってから子どもの横でコツコツやって2ヶ月で50万超えた。誰にも会わなくていいのが一番ありがたい。</p></div>
-    <p class="note">※体験談はイメージを含みます。成果には個人差があります。</p>
-  </div>
+  <!-- ===== 3ステップ ===== -->
+  <section>
+    <span class="kick rev">3 STEPS</span>
+    <h2 class="t rev">はじめ方は、<span class="em">たった3ステップ</span></h2>
+    <div class="sp"></div>
+    <div class="step rev" data-n="1">下のボタンからLINEを追加（30秒で完了）</div>
+    <div class="step rev" data-n="2">気になること・不安を気軽に質問（プロフや稼ぎ方の相談もOK）</div>
+    <div class="step rev" data-n="3">納得できたら、スマホ1台でそのままスタート</div>
+    <p class="lead rev" style="margin-top:16px">まずは<span class="em">質問だけでも大歓迎</span>🤍</p>
+  </section>
 
-  <!-- ⑩ 最後の告知 -->
-  <div class="block tight">
-    <div class="band">最後に、もう一度。</div>
-  </div>
-  <div class="block cta">
-    <p class="big" style="margin-bottom:14px">プロフ・写真・時間帯まで<br><span class="em">【ぜんぶ一緒に整えます】</span><br>だから初めてでも安心🤍</p>
-    <div class="box chk" style="text-align:left">
+  <!-- 途中CTA② -->
+  <div class="midcta rev"><a href="https://lin.ee/9hyERGM">まずはLINEで話を聞いてみる</a></div>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq">
+    <span class="kick rev">Q &amp; A</span>
+    <h2 class="t rev">よくある質問</h2>
+    <div class="sp"></div>
+    <dl>
+      <div class="qa rev"><dt>顔出ししないとダメ？</dt><dd>顔出しナシでOK。本名も出しません。身バレが不安な子ほど、隠し方まで一緒に整えます。</dd></div>
+      <div class="qa rev"><dt>未経験でもできる？</dt><dd>ほとんどが未経験スタート。プロフ・写真・時間帯・会話まで全部教えるので、初めてでも大丈夫。</dd></div>
+      <div class="qa rev"><dt>ノルマや罰金はある？</dt><dd>ノルマ・ペナルティなし。出れない日があっても大丈夫。自分のペースでOK。</dd></div>
+      <div class="qa rev"><dt>ガッツリなアダルトは無理…</dt><dd>ガッツリアダルトなし。どこまでやるかは自分で選べます。ほぼおしゃべりで稼いでる子も多いよ。</dd></div>
+      <div class="qa rev"><dt>身分証を出すのが怖い</dt><dd>年齢確認のためだけに使います。SNSや外部に出回ることは一切ありません。</dd></div>
+    </dl>
+  </section>
+
+  <!-- ===== 最終CTA ===== -->
+  <section class="cta">
+    <h2 class="rev">プロフも写真も時間帯も<br>ぜんぶ一緒に整えます</h2>
+    <p class="rev" style="font-size:14px;opacity:.95">だから初めてでも安心。<br>まずは、私に聞いてみて🤍</p>
+    <ul class="chk rev">
       <li>プロフ・写真・時間帯・会話設計まで全部教えます</li>
       <li>本名は出さなくてOK・ガッツリアダルトなし</li>
-      <li>スマホ1台で完結・<b>報酬率70%</b>(相場は50%)</li>
-    </div>
-    <p class="warn" style="margin:18px 0">⚠️ 枠に限りがあるので<br>早めに受け取ってね！</p>
-    <a class="linebtn" href="https://lin.ee/9hyERGM">LINE 友だち追加</a>
-    <p class="lh">👆 LINE追加はここから</p>
-    <img class="qr" src="images/line_qr.png" alt="LINE友だち追加QRコード">
-    <p class="lh" style="font-size:13px;color:var(--gray)">追加できない人用👆</p>
-    <p class="note">※女性限定です(男性は対象外)。<br>※18歳未満(高校生含む)はご利用いただけません。<br>※受付は予告なく終了する場合があります。<br>※成果には個人差があり、確実な収入を保証するものではありません。</p>
-  </div>
+      <li>スマホ1台で完結・<b>報酬率70%</b>（相場は50%）</li>
+    </ul>
+    <span class="warn rev">⚠️ 丁寧に対応するため受付を絞っています</span>
+    <a class="btn rev" href="https://lin.ee/9hyERGM">LINEで話を聞いてみる</a>
+    <img class="qr rev" src="images/line_qr.png" alt="LINE友だち追加QRコード">
+    <p class="rev" style="font-size:12.5px;opacity:.9">👆 QR または上のボタンから</p>
+    <p class="note rev">※女性限定です（男性は対象外）。※18歳未満（高校生含む）はご利用いただけません。<br>※受付は予告なく終了する場合があります。※成果には個人差があり、確実な収入を保証するものではありません。</p>
+  </section>
 
   <footer class="foot">© 2026</footer>
-
 </div>
+
+<!-- 追従CTA -->
+<div class="float"><a href="https://lin.ee/9hyERGM">▶ LINEで詳しく聞いてみる</a></div>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.14});
+  document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>

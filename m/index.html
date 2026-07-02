@@ -88,6 +88,19 @@
   .cta .qr{width:170px;border-radius:14px;margin:16px auto 6px;display:block;box-shadow:0 8px 22px rgba(0,0,0,.2)}
   .warn{display:inline-block;background:rgba(0,0,0,.18);border-radius:30px;padding:7px 16px;font-size:12.5px;font-weight:700;margin-bottom:8px}
   .note{font-size:11px;opacity:.85;margin-top:16px;line-height:1.7}
+  /* 途中CTA */
+  .cta-mid{padding:0 28px 44px}
+  .cta-mid a{display:block;background:var(--line);color:#fff;font-family:"Zen Maru Gothic";font-weight:900;
+    font-size:17px;padding:16px;border-radius:12px;text-decoration:none;text-align:center;box-shadow:0 8px 20px rgba(6,199,85,.35)}
+  /* 登録ステップ */
+  .step{position:relative;padding:15px 16px 15px 58px;margin:12px 0;background:#fff;border:1.5px solid #ffe1e9;
+    border-radius:16px;font-weight:500;font-size:14.5px;line-height:1.7;box-shadow:0 5px 14px rgba(255,111,145,.07)}
+  .step::before{content:attr(data-n);position:absolute;left:14px;top:50%;transform:translateY(-50%);
+    width:32px;height:32px;background:var(--p);color:#fff;border-radius:50%;font-family:"Zen Maru Gothic";
+    font-weight:900;display:flex;align-items:center;justify-content:center}
+  /* FAQ */
+  .faq dt{font-family:"Zen Maru Gothic";font-weight:900;color:var(--pd);margin-top:18px;font-size:15px;line-height:1.6}
+  .faq dd{font-size:14px;line-height:1.85;margin-top:6px;color:#52464c}
   .foot{background:#33272e;color:#8a7f85;text-align:center;padding:22px;font-size:11px}
 
   /* 固定フッターCTA */
@@ -132,6 +145,9 @@
     <p class="note rev" style="color:#b3a6ac">※実際の報酬明細です。成果には個人差があります</p>
   </section>
 
+  <!-- 途中CTA① -->
+  <div class="cta-mid rev"><a href="https://lin.ee/9hyERGM">私にもできるか、LINEで聞いてみる</a></div>
+
   <!-- 4特徴 -->
   <section>
     <span class="kicker rev">WHY MOM?</span>
@@ -172,6 +188,37 @@
         <li>本名なし・顔出しなしでもOK</li>
       </ul>
     </div>
+  </section>
+
+  <!-- 登録3ステップ -->
+  <section>
+    <span class="kicker rev">3 STEPS</span>
+    <h2 class="t rev">はじめ方は、<span class="em">たった3ステップ</span></h2>
+    <div class="step rev" data-n="1">下のボタンからLINEを追加（30秒で完了）</div>
+    <div class="step rev" data-n="2">「私にもできる?」を気軽に質問（不安・時間帯の相談もOK）</div>
+    <div class="step rev" data-n="3">納得できたら、子どもの横でそのままスタート</div>
+    <p class="lead rev" style="margin-top:16px">まずは<span class="em">質問だけでも大歓迎</span>🤍</p>
+  </section>
+
+  <!-- 途中CTA② -->
+  <div class="cta-mid rev"><a href="https://lin.ee/9hyERGM">まずはLINEで話を聞いてみる</a></div>
+
+  <!-- FAQ -->
+  <section class="sympathy">
+    <span class="kicker rev">Q &amp; A</span>
+    <h2 class="t rev">よくある質問</h2>
+    <dl class="faq">
+      <dt class="rev">Q. 家族や周りにバレない？</dt>
+      <dd class="rev">本名も顔出しも不要。身バレ対策も一緒に整えるので、旦那や周りに知られず続けてるママがほとんど。</dd>
+      <dt class="rev">Q. 育児の合間しか時間がない…</dt>
+      <dd class="rev">子どもが寝た後の30分〜でOK。送り迎えも寝かしつけも今まで通り。ノルマもないので自分のペースで。</dd>
+      <dt class="rev">Q. 未経験で何も分からない</dt>
+      <dd class="rev">ほとんどが未経験スタート。プロフ・写真・時間帯・会話まで全部こっちで教えるので大丈夫。</dd>
+      <dt class="rev">Q. ガッツリなアダルトは無理…</dt>
+      <dd class="rev">どこまでやるかは自分で選べます。ほぼおしゃべりで稼いでるママも多いよ。</dd>
+      <dt class="rev">Q. 身分証を出すのが不安</dt>
+      <dd class="rev">年齢確認のためだけに使います。SNSや外部に出回ることは一切ありません。</dd>
+    </dl>
   </section>
 
   <!-- CTA -->

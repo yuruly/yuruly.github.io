@@ -11,7 +11,7 @@
   :root{--pink:#a06bd8;--pink-d:#8a4dd0;--ink:#2b2b33;--gray:#8c8087;--line:#06c755;}
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);line-height:2;background:#e9e6ee;font-size:16px;-webkit-text-size-adjust:100%}
-  .wrap{max-width:500px;margin:0 auto;background:#fff;min-height:100vh}
+  .wrap{max-width:500px;margin:0 auto;background:#fff;min-height:100vh;padding-bottom:86px}
   .block{padding:54px 26px}
   .block.tight{padding:30px 26px}
   .mark{background:linear-gradient(transparent 62%, #d9c6f0 62%);font-weight:700;padding:0 2px}
@@ -38,6 +38,26 @@
   @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
   .qr{width:200px;margin:18px auto 6px;display:block}
   .note{font-size:12px;color:var(--gray);line-height:1.8;margin-top:18px}
+  /* 途中CTA */
+  .cta-mid{padding:4px 26px 24px}
+  .cta-mid a{display:block;background:var(--line);color:#fff;font-size:18px;font-weight:900;
+    padding:16px;border-radius:12px;text-decoration:none;text-align:center;box-shadow:0 6px 18px rgba(6,199,85,.4)}
+  /* 追従CTAバー */
+  .floatbar{position:fixed;left:0;right:0;bottom:0;z-index:50;max-width:500px;margin:0 auto;
+    background:rgba(255,255,255,.96);backdrop-filter:blur(6px);
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(0,0,0,.14)}
+  .floatbar a{display:block;background:var(--line);color:#fff;font-size:18px;font-weight:900;
+    padding:14px;border-radius:12px;text-decoration:none;text-align:center;box-shadow:0 6px 16px rgba(6,199,85,.4);
+    animation:pulse 1.8s ease-in-out infinite}
+  /* 登録ステップ */
+  .step{position:relative;padding:14px 16px 14px 58px;margin:12px 0;background:#faf8fd;
+    border:2px solid #e6dcf0;border-radius:14px;font-weight:500;font-size:15px;line-height:1.7}
+  .step::before{content:attr(data-n);position:absolute;left:14px;top:50%;transform:translateY(-50%);
+    width:32px;height:32px;background:var(--pink);color:#fff;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px}
+  /* FAQ */
+  .faq dt{font-weight:900;color:var(--pink-d);margin-top:18px;font-size:15.5px;line-height:1.6}
+  .faq dd{font-size:14.5px;line-height:1.85;margin-top:6px;color:#4d4256}
   .foot{background:#e7ddf2;text-align:center;padding:22px;font-size:12px;color:#9a8eb0}
 </style>
 </head>
@@ -72,6 +92,9 @@
     <div class="income"><img src="images/income_2month.png" alt="2ヶ月目の収益"></div>
     <p class="note" style="text-align:center">※実際の報酬明細です。成果には個人差があります。</p>
   </div>
+
+  <!-- 途中CTA① -->
+  <div class="cta-mid"><a href="https://lin.ee/9hyERGM">この働き方、LINEで詳しく聞いてみる</a></div>
 
   <!-- ④ こういう働き方 -->
   <div class="block tight">
@@ -142,6 +165,37 @@
     <p class="note">※体験談はイメージを含みます。成果には個人差があります。</p>
   </div>
 
+  <!-- ⑨.5 登録は3ステップ -->
+  <div class="block tight">
+    <div class="band">登録は、たった3ステップ</div>
+  </div>
+  <div class="block">
+    <div class="step" data-n="1">下のボタンからLINEを追加（30秒で完了）</div>
+    <div class="step" data-n="2">不安なこと・体を使わない働き方を気軽に質問</div>
+    <div class="step" data-n="3">納得できたら、スマホ1台で家からスタート</div>
+    <p class="lh" style="text-align:center;margin-top:10px">まずは<span class="em">質問だけでも大歓迎</span>🤍</p>
+  </div>
+
+  <!-- 途中CTA② -->
+  <div class="cta-mid"><a href="https://lin.ee/9hyERGM">まずはLINEで話を聞いてみる</a></div>
+
+  <!-- ⑨.7 FAQ -->
+  <div class="block tight"><div class="band">よくある質問</div></div>
+  <div class="block">
+    <dl class="faq">
+      <dt>Q. 本当に直接触られない？</dt>
+      <dd>画面越しだから物理的に触られません。密室で二人きりにもならないし、嫌な相手はすぐ切れます。</dd>
+      <dt>Q. 顔バレ・身バレが怖い</dt>
+      <dd>顔出しナシ・本名ナシでOK。身バレを防ぐ設定まで一緒に整えるので安心。</dd>
+      <dt>Q. 未経験でもできる？</dt>
+      <dd>ほとんどが未経験スタート。プロフ・写真・時間帯・会話まで全部教えます。</dd>
+      <dt>Q. ノルマや罰金はある？</dt>
+      <dd>ノルマ・ペナルティなし。出れない日があっても大丈夫。自分のペースでOK。</dd>
+      <dt>Q. 身分証を出すのが怖い</dt>
+      <dd>年齢確認のためだけに使います。SNSや外部に出回ることは一切ありません。</dd>
+    </dl>
+  </div>
+
   <!-- ⑩ 最後の告知 -->
   <div class="block tight">
     <div class="band">最後に、もう一度。</div>
@@ -164,5 +218,9 @@
   <footer class="foot">© 2026</footer>
 
 </div>
+
+<!-- 追従CTAバー（常時表示） -->
+<div class="floatbar"><a href="https://lin.ee/9hyERGM">▶ LINEで詳しく聞いてみる</a></div>
+
 </body>
 </html>
